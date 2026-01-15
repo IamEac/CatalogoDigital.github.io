@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo exclusivo de eventos - Diamond at Doral">
+    <title>Diamond at Doral | Experiencias de Lujo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="diamond-theme"> <!-- Key variation class so we can style it differently -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">DIAMOND <span class="thin">at Doral</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Cambiar Venue</a></li> <!-- Back to splash -->
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#paquetes">Paquetes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero" style="background-image: url('assets/diamond_thumb.png');">
+        <!-- Overriding inline for speed, or could use CSS class -->
+        <div class="hero-content">
+            <h1>Diamond <span class="gold-text"
+                    style="background: var(--diamond-gradient); -webkit-background-clip: text; background-clip: text;">at
+                    Doral</span></h1>
+            <p>La joya de tus celebraciones. Elegancia cristalina y servicio de clase mundial.</p>
+            <a href="#paquetes" class="cta-btn">Ver Colección</a>
+        </div>
+        <div class="hero-overlay" style="background: rgba(0, 20, 40, 0.7);"></div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <h2>Brilla en tu Evento</h2>
+            <p>Diamond at Doral ofrece un espacio sofisticado y luminoso, perfecto para bodas y quinceañeras que buscan
+                un estilo puro y radiante.</p>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="paquetes" class="packages">
+        <div class="container">
+            <h2 class="section-title">Nuestra Colección Elite <br><span
+                    style="font-size: 1rem; font-family: 'Montserrat', sans-serif; color: var(--gold); letter-spacing: 2px;">CAPACIDAD:
+                    80 - 200 INVITADOS</span></h2>
+
+            <div class="package-grid">
+
+                <!-- Paquete Platinum ($7,500) -->
+                <article class="package-card platinum">
+                    <div class="card-header">
+                        <img src="assets/platinum.png" alt="Icono Paquete Platinum" class="package-icon">
+                        <h3>Paquete Platinum</h3>
+                        <div class="price-tag">$7,500.00 <span class="tax">+ IVA</span></div>
+                        <div class="price-line"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="feature-group">
+                            <h4><i class="fas fa-wine-glass"></i> Bebidas</h4>
+                            <ul>
+                                <li>Licor House</li>
+                                <li>Refrescos / Jugo / Agua</li>
+                                <li><strong>Sidra</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-utensils"></i> Comida</h4>
+                            <ul>
+                                <li>Cake (Vainilla o Marmoleado)</li>
+                                <li>Menú: Entrada y Proteína</li>
+                                <li>2 Acompañantes</li>
+                                <li><strong>Mesa de Quesos & Carnes frías</strong></li>
+                                <li>Utensilios</li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-couch"></i> Decoración</h4>
+                            <ul>
+                                <li>Decoración House</li>
+                                <li><strong>Lounge Set + Cocktail</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-user-tie"></i> Personal & Entretenimiento</h4>
+                            <ul>
+                                <li>Bartender + Coordinador</li>
+                                <li>Personal de Atención</li>
+                                <li><strong>DJ Profesional</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-bolt"></i> Equipos</h4>
+                            <ul>
+                                <li>Mapping</li>
+                                <li>Pantalla LED</li>
+                                <li>Luces Stage</li>
+                                <li>Máquina de Humo & Chispas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="select-btn" onclick="selectPackage('Platinum Diamond Venue')">Reservar
+                            Platinum</button>
+                    </div>
+                </article>
+
+                <!-- Paquete Diamond ($10,500) -->
+                <article class="package-card diamond popular">
+                    <div class="badge">Recomendado</div>
+                    <div class="card-header">
+                        <img src="assets/diamond.png" alt="Icono Paquete Diamond" class="package-icon">
+                        <h3>Paquete Diamond</h3>
+                        <div class="price-tag">$10,500.00 <span class="tax">+ IVA</span></div>
+                        <div class="price-line"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="feature-group">
+                            <h4><i class="fas fa-wine-glass"></i> Bebidas</h4>
+                            <ul>
+                                <li>Licor House</li>
+                                <li>Refrescos / Jugo / Agua</li>
+                                <li>Sidra</li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-utensils"></i> Comida</h4>
+                            <ul>
+                                <li>Cake (Vainilla o Marmoleado)</li>
+                                <li>Menú: Entrada y Proteína</li>
+                                <li>2 Acompañantes</li>
+                                <li>Mesa de Quesos & Carnes frías</li>
+                                <li>Utensilios</li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-gem"></i> Decoración Plus</h4>
+                            <ul>
+                                <li><strong>Decoración Plus</strong></li>
+                                <li>Lounge Set + Cocktail</li>
+                                <li><strong>Número Lumínico</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-music"></i> Entretenimiento</h4>
+                            <ul>
+                                <li>DJ Profesional</li>
+                                <li><strong>Hora Loca</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-camera"></i> Foto & Transporte</h4>
+                            <ul>
+                                <li>Foto y Video (3 Horas)</li>
+                                <li>Photobooth Print</li>
+                                <li><strong>Limosina (15 Millas)</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-bolt"></i> Equipos</h4>
+                            <ul>
+                                <li>Mapping + Pantalla LED</li>
+                                <li>Luces Stage + Humo + Chispas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="select-btn" onclick="selectPackage('Diamond Package Venue')">Elegir
+                            Diamond</button>
+                    </div>
+                </article>
+
+                <!-- Paquete Deluxe ($12,500) -->
+                <article class="package-card special">
+                    <div class="card-header">
+                        <img src="assets/special.png" alt="Icono Paquete Deluxe" class="package-icon">
+                        <h3>Paquete Deluxe</h3>
+                        <div class="price-tag">$12,500.00 <span class="tax">+ IVA</span></div>
+                        <div class="price-line"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="feature-group">
+                            <h4><i class="fas fa-crown"></i> Bebidas Premium</h4>
+                            <ul>
+                                <li><strong>Licor Premium</strong></li>
+                                <li>Refrescos / Jugo / Agua</li>
+                                <li><strong>Champaña</strong></li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-utensils"></i> Gastronomía Deluxe</h4>
+                            <ul>
+                                <li>Cake (Vainilla o Marmoleado)</li>
+                                <li>Menú: Entrada y Proteína</li>
+                                <li>Mesa de Quesos & Carnes frías</li>
+                                <li><strong>Pasapalos + Mini Dulces</strong></li>
+                                <li>Utensilios</li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-holly-berry"></i> Decoración & Equipos</h4>
+                            <ul>
+                                <li>Decoración Plus + Lounge Set</li>
+                                <li>Número Lumínico</li>
+                                <li>Mapping + LED + Luces + Efectos</li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-star"></i> Show & Personal</h4>
+                            <ul>
+                                <li><strong>Maestro de Ceremonia</strong></li>
+                                <li>DJ Profesional + Hora Loca</li>
+                                <li>Bartender + Coordinador + Atención</li>
+                            </ul>
+                        </div>
+                        <div class="feature-group">
+                            <h4><i class="fas fa-video"></i> Cobertura Total</h4>
+                            <ul>
+                                <li><strong>Foto y Video (5 Horas)</strong></li>
+                                <li><em>Transporte (Consultar)</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="select-btn" onclick="selectPackage('Deluxe Diamond Venue')">Vivencia
+                            Suprema</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contacto" class="contact-cta">
+        <div class="container">
+            <h2>Haz Reserva en Diamond at Doral</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><a href="tel:+17863327065">+1 (786) 332-7065</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:diamondvenueatdoral@gmail.com">diamondvenueatdoral@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <p><a href="https://www.diamondvenuedoral.com/" target="_blank">www.diamondvenuedoral.com</a></p>
+                </div>
+            </div>
+
+            <a href="https://wa.me/17863327065" class="whatsapp-float" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat Directo
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Diamond at Doral. <br>Exclusividad y Estilo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
