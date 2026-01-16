@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body class="familiar-theme">
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">REVOLUTION <span class="thin">Party Venue</span></div>
         <ul class="nav-links">
+            <li><a href="index.html">Cambiar Venue</a></li>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#paquetes">Paquetes</a></li>
+            <li><a href="booking.html?venue=revolution" class="highlight-link">Agendar Visita</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
         <div class="menu-toggle">
@@ -33,20 +35,21 @@
 
     <!-- Hero Section -->
     <header id="inicio" class="hero">
+        <div class="hero-overlay" style="background: rgba(44, 24, 16, 0.3);"></div> <!-- Warm, lighter overlay -->
         <div class="hero-content">
             <h1>Revolution <span class="gold-text">Party Venue</span></h1>
-            <p>Donde la elegancia se encuentra con la exclusividad. Vive la experiencia definitiva.</p>
-            <a href="#paquetes" class="cta-btn">Descubrir Colección</a>
+            <p>Donde la familia celebra y los recuerdos perduran. Un espacio cálido para tus momentos más especiales.
+            </p>
+            <a href="#paquetes" class="cta-btn pulse-btn">Descubrir Paquetes</a>
         </div>
-        <div class="hero-overlay"></div>
     </header>
 
     <!-- Intro Section -->
     <section class="intro">
         <div class="container">
-            <h2>Experiencias de Otro Nivel</h2>
-            <p>No somos solo un lugar, somos el escenario de tus mejores recuerdos. Calidad premium, atención impecable
-                y detalles que marcan la diferencia.</p>
+            <h2>Celebra en Familia</h2>
+            <p>Ubicado en el corazón de la ciudad, Revolution ofrece un ambiente acogedor y festivo, ideal para
+                cumpleaños, bodas íntimas y reuniones familiares donde cada detalle cuenta.</p>
         </div>
     </section>
 
@@ -242,6 +245,12 @@
     <footer>
         <p>&copy; 2026 Revolution Party Venue. <br>Exclusividad y Estilo.</p>
     </footer>
+
+    <!-- Floating Action Button -->
+    <a href="booking.html?venue=revolution" class="fab-booking pulse-btn">
+        <i class="fas fa-calendar-check"></i>
+        <span class="fab-tooltip">¡Agenda tu Visita Hoy!</span>
+    </a>
 
     <script src="script.js"></script>
 </body>

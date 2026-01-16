@@ -200,10 +200,10 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 2rem;
-    transition: var(--transition);
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .package-card:hover {
@@ -254,6 +254,9 @@ ul {
     margin-bottom: 0.3rem;
     padding-left: 1rem;
     position: relative;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.5s ease;
 }
 
 .feature-group ul li::before {
@@ -261,6 +264,32 @@ ul {
     color: var(--gold);
     position: absolute;
     left: 0;
+}
+
+.package-card:hover .feature-group ul li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger delays */
+.package-card:hover .feature-group ul li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.package-card:hover .feature-group ul li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.package-card:hover .feature-group ul li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.package-card:hover .feature-group ul li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.package-card:hover .feature-group ul li:nth-child(5) {
+    transition-delay: 0.5s;
 }
 
 .card-footer {
@@ -279,6 +308,9 @@ ul {
     cursor: pointer;
     transition: var(--transition);
     border-radius: 5px;
+    position: relative;
+    /* For shimmer */
+    overflow: hidden;
 }
 
 .select-btn:hover {
@@ -469,15 +501,109 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Responsive */
+/* Mobile Menu Styles */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 13, 13, 0.98);
+    backdrop-filter: blur(15px);
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--gold);
+    animation: slideDown 0.3s ease-out;
+}
+
+.nav-links.active a {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Improvements */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    .menu-toggle {
+        display: block;
+        /* Show hamburger on mobile */
     }
 
     .nav-links {
         display: none;
-        /* Mobile menu to be implemented with JS if needed */
+        /* Hide default nav */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Grid adjustment for smaller screens */
+    .package-grid {
+        grid-template-columns: 1fr;
+        /* Force single column on mobile for better focus */
+        padding: 0 1rem;
+    }
+
+    .package-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Contact form mobile */
+    .contact-form input {
+        width: 100%;
+    }
+
+    .contact-grid {
+        gap: 2rem;
+    }
+
+    /* Diamond specific overrides for mobile */
+    .diamond-theme .nav-links.active {
+        border-bottom-color: #00d2ff;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .price-tag {
+        font-size: 1.5rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-gate-container h1 {
+        font-size: 2rem;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -496,18 +622,20 @@ footer {
 /* Landing Page / Netflix Style */
 .landing-page {
     background-color: #141414;
-    /* Netflix dark background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    overflow: hidden;
+    /* Prevent scrolling on landing */
 }
 
 .profile-gate-container {
     text-align: center;
     animation: fadeIn 1.5s ease;
     padding: 0 1rem;
+    z-index: 10;
 }
 
 .profile-gate-container h1 {
@@ -522,6 +650,8 @@ footer {
     gap: 3rem;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
 }
 
 .profile-card {
@@ -531,10 +661,11 @@ footer {
     text-decoration: none;
     transition: transform 0.2s;
     cursor: pointer;
+    flex: 0 1 auto;
+    /* Allow sizing */
 }
 
 .profile-card:hover {
-    /* Hover effect on wrapper */
     transform: scale(1.05);
 }
 
@@ -547,18 +678,15 @@ footer {
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    /* Slightly larger for better impact but limited */
+    height: 250px;
     border-radius: 4px;
-    /* Netflix boxy style */
     overflow: hidden;
     margin-bottom: 1rem;
     border: 3px solid transparent;
-    /* Highlight border */
     transition: border-color 0.2s;
     background-color: #333;
-    background-size: cover;
-    background-position: center;
 }
 
 .profile-image img {
@@ -575,12 +703,14 @@ footer {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .profile-desc {
     color: #505050;
     font-size: 0.8rem;
     font-style: italic;
+    text-align: center;
 }
 
 .manage-btn {
@@ -604,17 +734,12 @@ footer {
 /* Diamond Theme Specifics */
 .diamond-theme {
     --bg-color: #0b1a26;
-    /* Deep blue-ish dark */
     --card-bg: #112233;
     --gold: #00d2ff;
-    /* Replace gold with cyan/diamond blue for main accents */
     --gold-gradient: linear-gradient(135deg, #b9f2ff, #ffffff, #00d2ff);
-    /* Diamond gradient */
     --glass: rgba(0, 210, 255, 0.05);
-    /* Blueish glass */
 }
 
-/* Override CTA button for diamond theme to look cyan/blue */
 .diamond-theme .cta-btn {
     color: #000;
 }
@@ -630,7 +755,6 @@ footer {
 
 .diamond-theme .feature-group h4 {
     color: #88e1ff;
-    /* Light blue */
 }
 
 .diamond-theme .select-btn {
@@ -643,7 +767,6 @@ footer {
     color: #000;
 }
 
-/* Adjust contact CTA for diamond theme */
 .diamond-theme .contact-cta {
     background: linear-gradient(to bottom, #081018, #000);
     border-top: 1px solid rgba(0, 210, 255, 0.2);
@@ -663,7 +786,152 @@ footer {
     text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
 }
 
-/* Animation */
+.diamond-theme .nav-links.active {
+    border-bottom-color: #00d2ff;
+}
+
+/* Dynamic Animations & Interactions */
+.cta-btn,
+.select-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn::after,
+.select-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: none;
+}
+
+.cta-btn:hover::after,
+.select-btn:hover::after {
+    animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.pulse-btn {
+    animation: pulse-gold 2s infinite;
+}
+
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
+
+.diamond-theme .pulse-btn {
+    animation: pulse-diamond 2s infinite;
+}
+
+@keyframes pulse-diamond {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 210, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 210, 255, 0);
+    }
+}
+
+/* Float Animation for FAB */
+.fab-booking {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--gold);
+    color: #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    z-index: 2000;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-decoration: none;
+    border: 2px solid #fff;
+}
+
+.fab-booking:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.6);
+}
+
+.fab-tooltip {
+    position: absolute;
+    right: 70px;
+    background: #fff;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.fab-booking:hover .fab-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.diamond-theme .fab-booking {
+    background: #00d2ff;
+    box-shadow: 0 10px 25px rgba(0, 210, 255, 0.4);
+}
+
+.diamond-theme .fab-booking:hover {
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .fab-booking {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .profiles-wrapper {
+        flex-direction: column;
+        /* Force stack on smaller screens */
+        align-items: center;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

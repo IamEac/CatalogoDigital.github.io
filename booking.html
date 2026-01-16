@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Visita Exclusiva | Revolution & Diamond</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cinzel:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Elite Booking Styles */
+        .booking-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(180deg, #0a0a0c 0%, #111113 100%);
+            position: relative;
+        }
+
+        .booking-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, #0a0a0c 70%);
+            z-index: 1;
+        }
+
+        .booking-card {
+            background: linear-gradient(145deg, #18181b, rgba(24, 24, 27, 0.8));
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 950px;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12), 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .booking-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            color: #71717a;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 10;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close-btn:hover {
+            color: #fafafa;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .booking-info h2 {
+            font-family: 'Cinzel', serif;
+            color: #c9a227;
+            font-size: 1.75rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .booking-info p {
+            color: #a1a1aa;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .calendar-wrapper h3 {
+            color: #fafafa;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+            margin-bottom: 2rem;
+        }
+
+        .calendar-day {
+            background: #27272a;
+            padding: 12px 8px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            color: #fafafa;
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        .calendar-day:hover:not(.disabled) {
+            background: rgba(201, 162, 39, 0.15);
+            color: #c9a227;
+        }
+
+        .calendar-day.selected {
+            background: linear-gradient(135deg, #9a7b1a, #c9a227);
+            color: #0a0a0c;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.25);
+        }
+
+        .calendar-day.disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .time-slot {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            color: #a1a1aa;
+            font-size: 0.8rem;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .time-slot:hover,
+        .time-slot.selected {
+            border-color: #c9a227;
+            color: #c9a227;
+            background: rgba(201, 162, 39, 0.08);
+        }
+
+        .booking-form h3 {
+            color: #fafafa;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-form label {
+            color: #71717a;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 1rem;
+            background: #0a0a0c;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #fafafa;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: rgba(201, 162, 39, 0.5);
+        }
+
+        .booking-form input::placeholder {
+            color: #52525b;
+        }
+
+        .booking-form button {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #9a7b1a, #c9a227);
+            color: #0a0a0c;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
+        }
+
+        .booking-form button:hover {
+            box-shadow: 0 8px 24px rgba(201, 162, 39, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media(max-width: 768px) {
+            .booking-card {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="booking-container">
+        <div class="booking-overlay"></div>
+
+        <div class="booking-card">
+            <!-- Close Button -->
+            <a href="javascript:history.back()" id="closeBtn" class="close-btn" aria-label="Cerrar"><i
+                    class="fas fa-times"></i></a>
+
+            <div class="booking-info">
+                <h2>Agenda tu Visita VIP</h2>
+                <p>Selecciona fecha y hora para conocer nuestras instalaciones. Uno de nuestros coordinadores te
+                    atenderá personalmente.</p>
+
+                <div class="calendar-wrapper">
+                    <h3 style="color:white; margin-bottom:1rem;">Enero 2026</h3>
+                    <div class="calendar-grid">
+                        <!-- Simple Header -->
+                        <div style="color:var(--gold); font-size:0.8rem;">Do</div>
+                        <div style="color:var(--gold); font-size:0.8rem;">Lu</div>
+                        <div style="color:var(--gold); font-size:0.8rem;">Ma</div>
+                        <div style="color:var(--gold); font-size:0.8rem;">Mi</div>
+                        <div style="color:var(--gold); font-size:0.8rem;">Ju</div>
+                        <div style="color:var(--gold); font-size:0.8rem;">Vi</div>
+                        <div style="color:var(--gold); font-size:0.8rem;">Sa</div>
+
+                        <!-- Days (Mockup) -->
+                        <div class="calendar-day disabled">28</div>
+                        <div class="calendar-day disabled">29</div>
+                        <div class="calendar-day disabled">30</div>
+                        <div class="calendar-day disabled">31</div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day selected">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        <div class="calendar-day">10</div>
+
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                        <div class="calendar-day">17</div>
+                    </div>
+
+                    <h3 style="color:white; margin-bottom:1rem; margin-top:2rem;">Horarios Disponibles (10 AM - 6 PM)
+                    </h3>
+                    <div class="time-slots" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="time-slot">10:00 AM</div>
+                        <div class="time-slot">11:00 AM</div>
+                        <div class="time-slot">12:00 PM</div>
+                        <div class="time-slot">01:00 PM</div>
+                        <div class="time-slot">02:00 PM</div>
+                        <div class="time-slot">03:00 PM</div>
+                        <div class="time-slot">04:00 PM</div>
+                        <div class="time-slot">05:00 PM</div>
+                        <div class="time-slot">06:00 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-form-wrapper">
+                <form class="booking-form" id="bookingForm" onsubmit="saveBooking(event)">
+                    <h3 style="color:white; margin-bottom:1.5rem;">Tus Datos</h3>
+
+                    <label style="color:#888; font-size:0.9rem;">Venue de Interés</label>
+                    <select id="venueSelect">
+                        <option value="Revolution Party Venue">Revolution Party Venue</option>
+                        <option value="Diamond at Doral">Diamond at Doral</option>
+                    </select>
+
+                    <input type="text" id="name" placeholder="Nombre Completo" required>
+                    <input type="email" id="email" placeholder="Correo Electrónico" required>
+                    <input type="tel" id="phone" placeholder="Teléfono" required>
+
+                    <button type="submit">Confirmar Cita</button>
+
+                    <p id="successMessage" style="display:none; color: #4caf50; margin-top: 1rem; text-align: center;">
+                        <i class="fas fa-check-circle"></i> ¡Cita Agendada! Te hemos enviado un correo de confirmación.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple logic to simulate saving
+        function saveBooking(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+
+            btn.innerText = "Procesando...";
+            btn.style.opacity = "0.7";
+
+            setTimeout(() => {
+                const name = document.getElementById('name').value;
+                const venue = document.getElementById('venueSelect').value;
+                const bookingData = {
+                    date: "6 de Enero, 2026",
+                    time: "11:30 AM",
+                    name: name,
+                    venue: venue
+                };
+
+                // Fake persistence
+                localStorage.setItem('lastBooking', JSON.stringify(bookingData));
+
+                document.getElementById('successMessage').style.display = 'block';
+                btn.innerText = "¡Listo!";
+
+                setTimeout(() => {
+                    alert(`¡Gracias ${name}! Tu cita en ${venue} ha sido reservada para el 6 de Enero.`);
+                    window.location.href = venue.includes('Diamond') ? 'diamond.html' : 'revolution.html';
+                }, 1500);
+
+            }, 1000);
+        }
+
+        // Interaction for selection
+        document.querySelectorAll('.calendar-day:not(.disabled)').forEach(day => {
+            day.addEventListener('click', function () {
+                document.querySelectorAll('.calendar-day').forEach(d => d.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function () {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Check if there is a pending booking to select default venue
+        const urlParams = new URLSearchParams(window.location.search);
+        const venueParam = urlParams.get('venue');
+
+        if (venueParam) {
+            document.getElementById('venueSelect').value = venueParam === 'diamond' ? 'Diamond at Doral' : 'Revolution Party Venue';
+
+            // Update Close Button to go back to specific venue
+            const targetPage = venueParam === 'diamond' ? 'diamond.html' : 'revolution.html';
+            document.getElementById('closeBtn').href = targetPage;
+        } else {
+            // Default fallback if no param
+            document.getElementById('closeBtn').href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>
