@@ -314,7 +314,7 @@
                     <label style="color:#888; font-size:0.9rem;">Venue de Interés</label>
                     <select id="venueSelect">
                         <option value="Revolution Party Venue">Revolution Party Venue</option>
-                        <option value="Diamond at Doral">Diamond at Doral</option>
+                        <option value="Diamond Venue at Doral">Diamond Venue at Doral</option>
                     </select>
 
                     <input type="text" id="name" placeholder="Nombre Completo" required>
@@ -385,7 +385,7 @@
         const venueParam = urlParams.get('venue');
 
         if (venueParam) {
-            document.getElementById('venueSelect').value = venueParam === 'diamond' ? 'Diamond at Doral' : 'Revolution Party Venue';
+            document.getElementById('venueSelect').value = venueParam === 'diamond' ? 'Diamond Venue at Doral' : 'Revolution Party Venue';
 
             // Update Close Button to go back to specific venue
             const targetPage = venueParam === 'diamond' ? 'diamond.html' : 'revolution.html';

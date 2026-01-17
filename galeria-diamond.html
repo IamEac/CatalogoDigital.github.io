@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Galería Diamond | Revolution & Diamond Venues</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+            h1, h2, h3, h4, .serif {
+                font-family: 'Newsreader', serif;
+            }
+        }
+        :root {
+            --primary: #c5a358;
+            --background-light: #fdfdfb;
+            --charcoal: #1a1a1a;
+            --divider: #e5e1d8;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--background-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c5a358",
+                        "background-light": "#fdfdfb",
+                        "background-dark": "#0f0f0e",
+                        "charcoal": "#1a1a1a",
+                        "cream-muted": "#e5e1d8"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="overflow-y-scroll bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-300 transition-colors duration-300 antialiased">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-cream-muted dark:border-white/10">
+        <div class="px-6 py-4 flex flex-col items-center">
+            <div class="mb-4">
+                <a href="index.html"
+                    class="text-2xl font-medium tracking-[0.15em] uppercase text-charcoal dark:text-white hover:text-primary transition-colors">
+                    Revolution & Diamond
+                </a>
+            </div>
+            <nav
+                class="w-full max-w-[1600px] flex flex-wrap items-center justify-center gap-2 md:gap-0 md:justify-between text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.25em] font-medium text-charcoal/60 dark:text-white/50 border-t border-cream-muted/60 dark:border-white/5 pt-4">
+                <a class="hover:text-primary transition-colors py-2 font-bold text-charcoal dark:text-white"
+                    href="galeria.html">HOME</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-kendall.html">Kendall</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-doral.html">Doral</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2 text-primary border-b border-primary/40"
+                    href="#">Diamond</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-ig-revolution.html">IG Revolution</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria.html#ig-diamond">IG Diamond</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+
+                <a class="hover:text-primary transition-colors py-2" href="galeria-quesos.html">Mesa de Quesos</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-videos.html">Videos Party</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-corporate.html">Corporate</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-12 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto">
+
+        <!-- Views Container -->
+        <div id="views-container" class="min-h-screen">
+
+            <!-- DIAMOND FULL GALLERY VIEW -->
+            <div id="diamond-full-gallery" class="transition-opacity duration-500">
+                <!-- Header & Back Button -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <span
+                            class="text-primary text-[10px] uppercase tracking-[0.3em] font-semibold block mb-2">Diamond
+                            at Doral</span>
+                        <h2 class="text-4xl md:text-5xl font-light italic text-charcoal dark:text-white leading-tight">
+                            Diamond Gallery</h2>
+                    </div>
+                    <a href="galeria.html"
+                        class="group flex items-center gap-3 px-6 py-3 border border-charcoal/20 dark:border-white/20 rounded-full hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Volver</span>
+                    </a>
+                </div>
+
+                <!-- Diamond Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Videos (1) -->
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                        <video controls class="w-full h-full object-cover"
+                            src="galeria/diamond/diamond_video_01.mp4"></video>
+                    </div>
+
+                    <!-- Images (9) -->
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_02.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_03.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_04.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_05.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_06.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_07.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_08.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_09.jpeg" alt="Diamond"></div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="galeria/diamond/diamond_img_10.jpeg" alt="Diamond"></div>
+                </div>
+            </div>
+
+        </div><!-- End Views Container -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white/90 py-24 px-6 border-t-8 border-primary">
+        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-5">
+                <h2 class="text-4xl italic font-light mb-8">Eventos que Trascienden</h2>
+                <p class="text-sm font-light text-white/50 max-w-md leading-relaxed tracking-wide mb-12">
+                    Cada evento es una obra maestra en espera. Nuestros venues ofrecen el lienzo perfecto para tus
+                    celebraciones más importantes.
+                </p>
+                <div class="flex gap-6">
+                    <a href="booking.html"
+                        class="bg-primary text-charcoal px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Agendar
+                        Visita</a>
+                    <button
+                        class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 hover:border-primary transition-all"
+                        id="theme-toggle">
+                        <span class="material-symbols-outlined text-xl">contrast</span>
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-3 lg:col-start-7">
+                <h4 class="text-primary text-[10px] uppercase tracking-[0.4em] font-bold mb-8">Venues</h4>
+                <ul class="space-y-4 text-sm font-light tracking-wide text-white/60">
+                    <li><a class="hover:text-white transition-colors" href="revolution.html">Revolution Party Venue</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors" href="diamond.html">Diamond Venue at Doral</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div
+            class="max-w-[1600px] mx-auto mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/30">
+            <p>© 2026 Revolution & Diamond Venues. Todos los derechos reservados.</p>
+            <div class="flex gap-12">
+                <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+                <a class="hover:text-primary transition-colors" href="#">Términos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        themeBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+            }
+        });
+    </script>
+    <script async src="//www.instagram.com/embed.js"></script>
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal"
+        class="fixed inset-0 z-[60] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <button onclick="closeModal()"
+            class="absolute top-6 right-6 text-white hover:text-primary transition-colors z-[70]">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div id="lightbox-content" class="relative max-w-7xl max-h-[90vh] w-full flex items-center justify-center">
+            <!-- Content injected via JS -->
+        </div>
+        <div id="lightbox-caption"
+            class="absolute bottom-6 left-0 w-full text-center text-white/80 text-sm tracking-widest uppercase font-light">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('lightbox-modal');
+        const modalContent = document.getElementById('lightbox-content');
+        const modalCaption = document.getElementById('lightbox-caption');
+
+        function openModal(src, type, caption) {
+            modal.classList.remove('hidden');
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            document.body.style.overflow = 'hidden';
+
+            modalCaption.innerText = caption || '';
+            modalContent.innerHTML = `<img src="${src}" class="max-w-full max-h-[85vh] object-contain shadow-2xl" alt="${caption}">`;
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.innerHTML = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.id === 'lightbox-content') closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gridImages = document.querySelectorAll('.grid img');
+            gridImages.forEach(img => {
+                const wrapper = img.closest('.relative');
+                if (wrapper) {
+                    wrapper.style.cursor = 'pointer';
+                    wrapper.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        openModal(img.src, 'IMAGE', img.alt);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Instagram Revolution | Revolution & Diamond Venues</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+            h1, h2, h3, h4, .serif {
+                font-family: 'Newsreader', serif;
+            }
+        }
+        :root {
+            --primary: #c5a358;
+            --background-light: #fdfdfb;
+            --charcoal: #1a1a1a;
+            --divider: #e5e1d8;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--background-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c5a358",
+                        "background-light": "#fdfdfb",
+                        "background-dark": "#0f0f0e",
+                        "charcoal": "#1a1a1a",
+                        "cream-muted": "#e5e1d8"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="overflow-y-scroll bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-300 transition-colors duration-300 antialiased">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-cream-muted dark:border-white/10">
+        <div class="px-6 py-4 flex flex-col items-center">
+            <div class="mb-4">
+                <a href="index.html"
+                    class="text-2xl font-medium tracking-[0.15em] uppercase text-charcoal dark:text-white hover:text-primary transition-colors">
+                    Revolution & Diamond
+                </a>
+            </div>
+            <nav
+                class="w-full max-w-[1600px] flex flex-wrap items-center justify-center gap-2 md:gap-0 md:justify-between text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.25em] font-medium text-charcoal/60 dark:text-white/50 border-t border-cream-muted/60 dark:border-white/5 pt-4">
+                <a class="hover:text-primary transition-colors py-2 font-bold text-charcoal dark:text-white"
+                    href="galeria.html">HOME</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-kendall.html">Kendall</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-doral.html">Doral</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-diamond.html">Diamond</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2 text-primary border-b border-primary/40" href="#">IG
+                    Revolution</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria.html#ig-diamond">IG Diamond</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+
+                <a class="hover:text-primary transition-colors py-2" href="galeria-quesos.html">Mesa de Quesos</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-videos.html">Videos Party</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="galeria-corporate.html">Corporate</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-12 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto">
+
+        <!-- Views Container -->
+        <div id="views-container" class="min-h-screen">
+
+            <!-- IG REVOLUTION FULL GALLERY VIEW -->
+            <div id="ig-revolution-full-gallery" class="transition-opacity duration-500">
+                <!-- Header & Back Button -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <span
+                            class="text-primary text-[10px] uppercase tracking-[0.3em] font-semibold block mb-2">Social
+                            Media</span>
+                        <h2 class="text-4xl md:text-5xl font-light italic text-charcoal dark:text-white leading-tight">
+                            @RevolutionPartyVenues</h2>
+                        <a href="https://www.instagram.com/revolutionpartyvenues/" target="_blank"
+                            class="inline-block mt-4 text-xs font-bold uppercase tracking-widest text-primary hover:text-charcoal dark:hover:text-white transition-colors border-b border-primary/30">
+                            Ver en Instagram &rarr;
+                        </a>
+                    </div>
+                    <a href="galeria.html"
+                        class="group flex items-center gap-3 px-6 py-3 border border-charcoal/20 dark:border-white/20 rounded-full hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Volver</span>
+                    </a>
+                </div>
+
+                <!-- Instagram Grid Container -->
+                <div id="instafeed" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Loading State -->
+                    <div class="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center py-20">
+                        <div class="animate-pulse flex flex-col items-center">
+                            <div class="h-12 w-12 bg-gray-200 dark:bg-white/10 rounded-full mb-4"></div>
+                            <div class="h-4 w-48 bg-gray-200 dark:bg-white/10 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Message (Hidden by default) -->
+                <div id="error-message" class="hidden text-center py-12">
+                    <p class="text-red-500 text-sm tracking-wide">No se pudo cargar el feed de Instagram. Por favor
+                        verifica los tokens.</p>
+                </div>
+            </div>
+
+        </div><!-- End Views Container -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white/90 py-24 px-6 border-t-8 border-primary">
+        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-5">
+                <h2 class="text-4xl italic font-light mb-8">Eventos que Trascienden</h2>
+                <p class="text-sm font-light text-white/50 max-w-md leading-relaxed tracking-wide mb-12">
+                    Cada evento es una obra maestra en espera. Nuestros venues ofrecen el lienzo perfecto para tus
+                    celebraciones más importantes.
+                </p>
+                <div class="flex gap-6">
+                    <a href="booking.html"
+                        class="bg-primary text-charcoal px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors">Agendar
+                        Visita</a>
+                    <button
+                        class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 hover:border-primary transition-all"
+                        id="theme-toggle">
+                        <span class="material-symbols-outlined text-xl">contrast</span>
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-3 lg:col-start-7">
+                <h4 class="text-primary text-[10px] uppercase tracking-[0.4em] font-bold mb-8">Venues</h4>
+                <ul class="space-y-4 text-sm font-light tracking-wide text-white/60">
+                    <li><a class="hover:text-white transition-colors" href="revolution.html">Revolution Party Venue</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors" href="diamond.html">Diamond Venue at Doral</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div
+            class="max-w-[1600px] mx-auto mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/30">
+            <p>© 2026 Revolution & Diamond Venues. Todos los derechos reservados.</p>
+            <div class="flex gap-12">
+                <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+                <a class="hover:text-primary transition-colors" href="#">Términos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        themeBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+            }
+        });
+    </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal"
+        class="fixed inset-0 z-[60] hidden bg-black/90 backdrop-blur-sm transition-opacity duration-300 opacity-0 flex items-center justify-center p-4">
+        <button onclick="closeModal()"
+            class="absolute top-4 right-4 text-white hover:text-primary transition-colors z-50">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div class="relative w-full max-w-5xl max-h-[90vh] flex flex-col items-center justify-center"
+            onclick="event.stopPropagation()">
+            <div id="lightbox-content" class="w-full h-full flex items-center justify-center">
+                <!-- Content injected via JS -->
+            </div>
+            <div id="lightbox-caption" class="mt-4 text-white text-center text-sm font-light max-w-2xl px-4"></div>
+        </div>
+    </div>
+
+    <!-- Instagram API Script -->
+    <script>
+        // CLIENT CREDENTIALS - PLEASE PROVIDE THESE
+        const ACCESS_TOKEN = 'IGAAq8YlNU7nJBZAGFweDBmUGY2M3ZAvN2FsUU1jNFVWR1ZAvNlRUWkR2cHNfNk9QSXA3U1lwb3pRMGVKSDZA0b1ZANakJWdjYxYVZAGMnY4eVloOWFuTldGdTh5cnhzRjVMTVJUbDBkdXhSQjdNblpBY3J2Q3U4ZA3ZAKNWItZA01JWm9ISQZDZD';
+        const IG_BUSINESS_ID = '17841406235405781'; // e.g. 178414xxxxxxxxx
+
+        const modal = document.getElementById('lightbox-modal');
+        const modalContent = document.getElementById('lightbox-content');
+        const modalCaption = document.getElementById('lightbox-caption');
+
+        function openModal(mediaSrc, mediaType, caption) {
+            modal.classList.remove('hidden');
+            // Trigger reflow for transition
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            document.body.style.overflow = 'hidden';
+
+            modalCaption.innerText = caption || '';
+
+            if (mediaType === 'VIDEO') {
+                modalContent.innerHTML = `
+                    <video controls autoplay class="max-w-full max-h-[80vh] rounded-md shadow-2xl">
+                        <source src="${mediaSrc}" type="video/mp4">
+                        Tu navegador no soporta video.
+                    </video>
+                `;
+            } else {
+                modalContent.innerHTML = `
+                    <img src="${mediaSrc}" alt="${caption}" class="max-w-full max-h-[80vh] object-contain rounded-md shadow-2xl">
+                `;
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.innerHTML = ''; // Stop video playback
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Close on background click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Close on Esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+        });
+
+        async function fetchInstagramPosts() {
+            const feedContainer = document.getElementById('instafeed');
+            const errorContainer = document.getElementById('error-message');
+
+            if (ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN' || IG_BUSINESS_ID === 'YOUR_IG_BUSINESS_ID') {
+                console.warn('Credenciales de Instagram no configuradas.');
+                feedContainer.innerHTML = '<div class="col-span-full text-center text-charcoal/50 dark:text-white/50">Configura el Token de Acceso e ID de Instagram en el código.</div>';
+                return;
+            }
+
+            try {
+                // Fetch media - Limit increased to 24
+                const limit = 24;
+                // Updated fields to get better quality media URL if available
+                const url = `https://graph.instagram.com/${IG_BUSINESS_ID}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,children{media_url,thumbnail_url,media_type}&access_token=${ACCESS_TOKEN}&limit=${limit}`;
+
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.error) {
+                    throw new Error(data.error.message);
+                }
+
+                const posts = data.data;
+                feedContainer.innerHTML = ''; // Clear loading
+
+                posts.forEach(post => {
+                    const isVideo = post.media_type === 'VIDEO';
+                    const isCarousel = post.media_type === 'CAROUSEL_ALBUM';
+
+                    // Determine Thumbnail (Grid Image)
+                    let thumbSrc = post.media_url;
+                    if (isVideo) {
+                        thumbSrc = post.thumbnail_url || post.media_url; // Some videos might not return thumbnail_url
+                    } else if (isCarousel && post.children && post.children.data.length > 0) {
+                        // For carousel, use the first child's media for the grid thumbnail
+                        const firstChild = post.children.data[0];
+                        thumbSrc = (firstChild.media_type === 'VIDEO' && firstChild.thumbnail_url) ? firstChild.thumbnail_url : firstChild.media_url;
+                    }
+
+                    // Determine Full Media Source (Lightbox)
+                    let fullMediaSrc = post.media_url;
+                    let displayMediaType = post.media_type;
+
+                    if (isCarousel && post.children && post.children.data.length > 0) {
+                        // For carousel, use the first child's media for the lightbox
+                        const firstChild = post.children.data[0];
+                        fullMediaSrc = firstChild.media_url;
+                        displayMediaType = firstChild.media_type;
+                    }
+
+                    const caption = post.caption ? post.caption : '';
+                    const shortCaption = caption.length > 80 ? caption.substring(0, 80) + '...' : caption;
+
+                    // Escape caption for onclick attribute
+                    const safeCaption = caption.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                    const safeMediaSrc = fullMediaSrc.replace(/'/g, "\\'");
+
+                    const cardHTML = `
+                        <div class="relative group h-[400px] overflow-hidden rounded-xl bg-gray-100 dark:bg-zinc-800 cursor-pointer"
+                             onclick="openModal('${safeMediaSrc}', '${displayMediaType}', '${safeCaption}')">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                 src="${thumbSrc}" 
+                                 alt="Instagram Post">
+                            
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                                ${isVideo ? '<span class="material-symbols-outlined text-white text-4xl mb-2">play_circle</span>' : ''}
+                                ${isCarousel ? '<span class="material-symbols-outlined text-white text-4xl mb-2">collections</span>' : ''}
+                                <p class="text-white text-xs mb-4 line-clamp-3">${shortCaption}</p>
+                                <div class="flex gap-2">
+                                    <span class="text-white text-[10px] uppercase tracking-[0.2em] border border-white/60 px-4 py-2 hover:bg-white hover:text-black transition-colors">
+                                        Ver Ahora
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <!-- Icon (Video/Image) -->
+                            <div class="absolute top-4 right-4 text-white drop-shadow-md z-10">
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                            </div>
+                             <!-- Link to IG (bottom right) -->
+                             <a href="${post.permalink}" target="_blank" onclick="event.stopPropagation()"
+                                class="absolute bottom-4 right-4 text-white hover:text-primary transition-colors z-20" title="Ver en Instagram">
+                                 <span class="material-symbols-outlined text-lg">open_in_new</span>
+                             </a>
+                        </div>
+                    `;
+                    feedContainer.insertAdjacentHTML('beforeend', cardHTML);
+                });
+
+            } catch (error) {
+                console.error('Error fetching Instagram feed:', error);
+                feedContainer.innerHTML = '';
+                errorContainer.classList.remove('hidden');
+                errorContainer.querySelector('p').innerText = `Error: ${error.message}`;
+            }
+        }
+
+        // Initialize fetch
+        document.addEventListener('DOMContentLoaded', fetchInstagramPosts);
+    </script>
+</body>
+
+</html>

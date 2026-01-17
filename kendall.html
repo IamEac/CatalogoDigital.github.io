@@ -30,7 +30,7 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            gap: 1.5rem;
+            gap: 2.5rem;
             width: 100%;
         }
         @media (min-width: 768px) {
@@ -76,7 +76,7 @@
 </head>
 
 <body
-    class="overflow-y-scroll bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-300 transition-colors duration-300 antialiased">
+    class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-300 transition-colors duration-300 antialiased">
 
     <!-- Header -->
     <header
@@ -90,25 +90,27 @@
             </div>
             <nav
                 class="w-full max-w-[1600px] flex flex-wrap items-center justify-center gap-2 md:gap-0 md:justify-between text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.25em] font-medium text-charcoal/60 dark:text-white/50 border-t border-cream-muted/60 dark:border-white/5 pt-4">
-                <a class="hover:text-primary transition-colors py-2 font-bold text-charcoal dark:text-white"
-                    href="galeria.html">HOME</a>
+                <a class="hover:text-primary transition-colors py-2 font-bold text-charcoal dark:text-white" href="#"
+                    onclick="showMainGallery(); return false;">HOME</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-                <a class="hover:text-primary transition-colors py-2" href="galeria-kendall.html">Kendall</a>
+                <a class="hover:text-primary transition-colors py-2" href="#kendall">Kendall</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-                <a class="hover:text-primary transition-colors py-2" href="galeria-doral.html">Doral</a>
+                <a class="hover:text-primary transition-colors py-2" href="#doral">Doral</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-                <a class="hover:text-primary transition-colors py-2" href="galeria-diamond.html">Diamond</a>
+                <a class="hover:text-primary transition-colors py-2" href="#diamond">Diamond</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-                <a class="hover:text-primary transition-colors py-2" href="galeria-ig-revolution.html">IG Revolution</a>
+                <a class="hover:text-primary transition-colors py-2 text-primary border-b border-primary/40"
+                    href="#ig-revolution">IG Revolution</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
                 <a class="hover:text-primary transition-colors py-2" href="#ig-diamond">IG Diamond</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-
-                <a class="hover:text-primary transition-colors py-2" href="galeria-quesos.html">Mesa de Quesos</a>
+                <a class="hover:text-primary transition-colors py-2" href="#reviews">Reviews</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-                <a class="hover:text-primary transition-colors py-2" href="galeria-videos.html">Videos Party</a>
+                <a class="hover:text-primary transition-colors py-2" href="#mesas">Mesa de Quesos</a>
                 <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
-                <a class="hover:text-primary transition-colors py-2" href="galeria-corporate.html">Corporate</a>
+                <a class="hover:text-primary transition-colors py-2" href="#videos">Videos Party</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10"></span>
+                <a class="hover:text-primary transition-colors py-2" href="#corporate">Corporate</a>
             </nav>
         </div>
     </header>
@@ -142,16 +144,34 @@
                 <div class="gallery-grid">
 
                     <!-- Item 1 - Kendall (Carousel) -->
-                    <div class="group relative cursor-pointer" id="kendall"
-                        onclick="location.href='galeria-kendall.html'">
+                    <div class="group relative" id="kendall">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[400px] group">
+                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[500px] group">
                             <!-- Carousel Container -->
                             <div class="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                                <!-- Videos -->
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/kendall/kendall_img_02.jpeg"
+                                        src="galeria/kendall/kendall_video_05.mp4"></video>
+                                </div>
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/kendall/kendall_img_02.jpeg"
+                                        src="galeria/kendall/kendall_video_02.mp4"></video>
+                                </div>
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/kendall/kendall_img_02.jpeg"
+                                        src="galeria/kendall/kendall_video_03.mp4"></video>
+                                </div>
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/kendall/kendall_img_02.jpeg"
+                                        src="galeria/kendall/kendall_video_04.mp4"></video>
+                                </div>
+
                                 <!-- Images -->
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
-                                        class="w-full h-full object-cover" src="galeria/kendall/kendall_img_11.jpeg"
-                                        alt="Kendall Event"></div>
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/kendall/kendall_img_02.jpeg"
                                         alt="Kendall Event"></div>
@@ -173,24 +193,6 @@
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/kendall/kendall_img_08.jpeg"
                                         alt="Kendall Event"></div>
-
-                                <!-- Videos -->
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/kendall/kendall_video_05.mp4"></video>
-                                </div>
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/kendall/kendall_video_02.mp4"></video>
-                                </div>
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/kendall/kendall_video_03.mp4"></video>
-                                </div>
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/kendall/kendall_video_04.mp4"></video>
-                                </div>
                             </div>
 
                             <!-- Info Overlay -->
@@ -214,16 +216,27 @@
                             <div
                                 class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto">
                                 <a class="text-white text-[10px] uppercase tracking-[0.3em] border border-white/60 px-6 py-3 bg-black/40 backdrop-blur-md hover:bg-white hover:text-charcoal transition-all"
-                                    href="booking.html" onclick="event.stopPropagation()">Agendar Visita</a>
+                                    href="revolution.html">Ver Venue</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 2 - Doral (Carousel) -->
-                    <div class="group relative cursor-pointer" id="doral" onclick="location.href='galeria-doral.html'">
+                    <div class="group relative" id="doral">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[400px] group">
+                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[500px] group">
                             <div class="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                                <!-- Videos -->
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/doral/doral_img_02.jpeg"
+                                        src="galeria/doral/doral_video_03.mp4"></video>
+                                </div>
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/doral/doral_img_02.jpeg"
+                                        src="galeria/doral/doral_video_02.mp4"></video>
+                                </div>
                                 <!-- Images -->
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/doral/doral_img_02.jpeg"
@@ -246,16 +259,6 @@
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/doral/doral_img_08.jpeg"
                                         alt="Doral Event"></div>
-
-                                <!-- Videos -->
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/doral/doral_video_03.mp4"></video>
-                                </div>
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/doral/doral_video_02.mp4"></video>
-                                </div>
                             </div>
 
                             <div
@@ -277,14 +280,19 @@
                     </div>
 
                     <!-- Item 3 - Diamond (Carousel) -->
-                    <div class="group relative cursor-pointer" id="diamond"
-                        onclick="location.href='galeria-diamond.html'">
+                    <div class="group relative" id="diamond">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[400px] group">
+                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[500px] group">
                             <div class="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                                <!-- Videos -->
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/diamond/diamond_img_02.jpeg"
+                                        src="galeria/diamond/diamond_video_01.mp4"></video>
+                                </div>
                                 <!-- Images -->
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
-                                        class="w-full h-full object-cover" src="galeria/diamond/diamond_img_06.jpeg"
+                                        class="w-full h-full object-cover" src="galeria/diamond/diamond_img_02.jpeg"
                                         alt="Diamond Event"></div>
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/diamond/diamond_img_03.jpeg"
@@ -296,7 +304,7 @@
                                         class="w-full h-full object-cover" src="galeria/diamond/diamond_img_05.jpeg"
                                         alt="Diamond Event"></div>
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
-                                        class="w-full h-full object-cover" src="galeria/diamond/diamond_img_02.jpeg"
+                                        class="w-full h-full object-cover" src="galeria/diamond/diamond_img_06.jpeg"
                                         alt="Diamond Event"></div>
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/diamond/diamond_img_07.jpeg"
@@ -310,12 +318,6 @@
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/diamond/diamond_img_10.jpeg"
                                         alt="Diamond Event"></div>
-
-                                <!-- Videos -->
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/diamond/diamond_video_01.mp4"></video>
-                                </div>
                             </div>
 
                             <div
@@ -337,19 +339,18 @@
                             <div
                                 class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-auto">
                                 <a class="text-white text-[10px] uppercase tracking-[0.3em] border border-white/60 px-6 py-3 bg-black/40 backdrop-blur-md hover:bg-white hover:text-charcoal transition-all"
-                                    href="booking.html" onclick="event.stopPropagation()">Agendar Visita</a>
+                                    href="diamond.html">Ver Venue</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Item 4 - Instagram Revolution -->
-                    <div class="group relative cursor-pointer" id="ig-revolution"
-                        onclick="location.href='galeria-ig-revolution.html'">
+                    <div class="group relative" id="ig-revolution">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[400px]">
+                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[500px]">
                             <img alt="Instagram Revolution"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02] opacity-90 group-hover:opacity-100"
-                                src="galeria/kendall/kendall_img_05.jpeg" />
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKjIlzrLPqlIa6BfVw4GorNKNKWbh3EJzYQLoYL63Y37Bkep7-eghXAQREXFzKPw1CtfnkBDREC_vkxAcOEW00TGwAFkgVCXWpXQl2FMlBD4flkTmWesjLsL0y4gEvNd2Jl1DcjaYyASu1pm8usXc_jQn37dEpiUTQKL9rfhutLRsJeg2Pp60WBBbeOPKvR7YTho5z5OJby3xXJL0-1DOUWkrzTp0fNtsZTfRZEv03x628iaOG47UyC0YAq914j4d5JEYUdFbqL0o6" />
                             <div
                                 class="absolute top-6 right-6 z-10 opacity-80 group-hover:opacity-100 transition-opacity">
                                 <i class="fab fa-instagram text-white text-xl drop-shadow-md"></i>
@@ -357,8 +358,7 @@
                             <div
                                 class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                 <a class="text-white text-[10px] uppercase tracking-[0.3em] border border-white/60 px-6 py-3 bg-black/40 backdrop-blur-md hover:bg-white hover:text-charcoal transition-all"
-                                    href="https://www.instagram.com/revolutionpartyvenues/" target="_blank"
-                                    onclick="event.stopPropagation()">Ver
+                                    href="https://www.instagram.com/revolutionpartyvenues/" target="_blank">Ver
                                     Instagram</a>
                             </div>
                         </div>
@@ -376,10 +376,10 @@
                     <!-- Item 5 - Instagram Diamond -->
                     <div class="group relative" id="ig-diamond">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[400px]">
+                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[500px]">
                             <img alt="Instagram Diamond"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02] opacity-90 group-hover:opacity-100"
-                                src="galeria/diamond/diamond_img_04.jpeg" />
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW0A328eDFUfFVn2pj1Ey7CGF3_cSvRFLXFode_2uxzGqVXThvrBjABWznVAyIHsUynfD4bs9ErG0S2sj4Rglq78O58WoQ274aCTjE7Cce0wM0poPa9m6fS2zzRs8JKsq-kiVtNkFmh6dpJeTSFHeAfe2N7asEbBszzWwfLYpe9IshgTffKA6LWC0uTex3K4W7vmf2NddjNCDV_hzamWdkcL--5PtxjkB1BdbA2772IVsAfq2P-PwfZvw6AXAZNMtsXlKiqMJUhTx3" />
                             <div
                                 class="absolute top-6 right-6 z-10 opacity-80 group-hover:opacity-100 transition-opacity">
                                 <i class="fab fa-instagram text-white text-xl drop-shadow-md"></i>
@@ -402,12 +402,38 @@
                         </div>
                     </div>
 
-
+                    <!-- Item 6 - Reviews Google -->
+                    <div class="group relative" id="reviews">
+                        <div
+                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[500px]">
+                            <img alt="Reviews Google"
+                                class="w-full transition-transform duration-1000 group-hover:scale-[1.02]"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLfdOZmgtRnmJ0dIH4JoTNwBzSV6NLN8Am_8aj2bMnOkChW99Z8jDfGN1m-OYOZ00nPS1Pe-nWgV9xMj2_kxmfRjhX2aX2-7MG7Sc148c8ogVKOFuf_6MklfJifN4fMpiutJ3F5Q5cIiOZSR67iPr01wIFkI8GVWPwz7Fj-shunvjJUzvzijYQ-0lN6TdKu6D6y-xpZImET2VDkTZqY45zKGluMgccvpnGBZE5EVn5Uo3SMh58cYTBXglAimtepxCNBuCFUQ2OBHCG" />
+                            <div
+                                class="absolute top-6 right-6 z-10 opacity-80 group-hover:opacity-100 transition-opacity">
+                                <i class="fab fa-google text-white text-xl drop-shadow-md"></i>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-charcoal/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <a class="text-white text-[10px] uppercase tracking-[0.3em] border border-white/60 px-6 py-3 bg-black/40 backdrop-blur-md hover:bg-white hover:text-charcoal transition-all"
+                                    href="#">Ver Reviews</a>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-6 flex justify-between items-start border-b border-cream-muted pb-4 dark:border-white/10">
+                            <div>
+                                <h3 class="text-2xl italic font-light serif leading-tight">Reviews de Clientes</h3>
+                                <p class="text-[10px] uppercase tracking-widest text-primary mt-2">Google Reviews · 5
+                                    Stars</p>
+                            </div>
+                            <span class="text-[10px] font-medium opacity-30">06</span>
+                        </div>
+                    </div>
 
                     <!-- Item 7 - Mesas de Quesos (Carousel) -->
-                    <div class="group relative cursor-pointer" id="mesas" onclick="location.href='galeria-quesos.html'">
+                    <div class="group relative" id="mesas">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[400px] group">
+                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[500px] group">
                             <div class="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
                                 <!-- Images -->
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
@@ -458,10 +484,9 @@
                     </div>
 
                     <!-- Item 8 - Videos Party -->
-                    <div class="group relative cursor-pointer" id="videos"
-                        onclick="location.href='galeria-videos.html'">
+                    <div class="group relative" id="videos">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[400px]">
+                            class="relative overflow-hidden rounded-xl shadow-lg transition-all duration-700 hover:shadow-2xl bg-white dark:bg-zinc-900 p-2 h-[500px]">
                             <video autoplay muted loop playsinline
                                 class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
                                 src="galeria/videos_party/party_video_01.mp4"></video>
@@ -478,11 +503,16 @@
                     </div>
 
                     <!-- Item 9 - Corporate (Carousel) -->
-                    <div class="group relative cursor-pointer" id="corporate"
-                        onclick="location.href='galeria-corporate.html'">
+                    <div class="group relative" id="corporate">
                         <div
-                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[400px] group">
+                            class="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-zinc-900 h-[500px] group">
                             <div class="flex h-full overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                                <!-- Videos -->
+                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
+                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
+                                        poster="galeria/corporate/corp_img_02.jpeg"
+                                        src="galeria/corporate/corp_video_02.mp4"></video>
+                                </div>
                                 <!-- Images -->
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/corporate/corp_img_02.jpeg"
@@ -496,12 +526,6 @@
                                 <div class="min-w-full h-full snap-center relative flex-shrink-0"><img
                                         class="w-full h-full object-cover" src="galeria/corporate/corp_img_05.jpeg"
                                         alt="Corporate Event"></div>
-
-                                <!-- Videos -->
-                                <div class="min-w-full h-full snap-center relative flex-shrink-0">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover"
-                                        src="galeria/corporate/corp_video_02.mp4"></video>
-                                </div>
                             </div>
 
                             <div
@@ -524,7 +548,143 @@
             </div><!-- End gallery-grid -->
         </div><!-- End main-gallery-view -->
 
+        <!-- KENDALL FULL GALLERY VIEW (Hidden by default) -->
+        <div id="kendall-full-gallery" class="hidden transition-opacity duration-500">
+            <!-- Header & Back Button -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <span
+                        class="text-primary text-[10px] uppercase tracking-[0.3em] font-semibold block mb-2">Revolution
+                        Party Venue</span>
+                    <h2 class="text-4xl md:text-5xl font-light italic text-charcoal dark:text-white leading-tight">
+                        Kendall Gallery</h2>
+                </div>
+                <button onclick="showMainGallery()"
+                    class="group flex items-center gap-3 px-6 py-3 border border-charcoal/20 dark:border-white/20 rounded-full hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal transition-all duration-300">
+                    <span
+                        class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    <span class="text-xs font-bold uppercase tracking-widest">Volver</span>
+                </button>
+            </div>
+
+            <!-- Kendall Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Videos (4) -->
+                <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                    <video controls class="w-full h-full object-cover" poster="galeria/kendall/kendall_img_02.jpeg"
+                        src="galeria/kendall/kendall_video_05.mp4"></video>
+                </div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                    <video controls class="w-full h-full object-cover" poster="galeria/kendall/kendall_img_02.jpeg"
+                        src="galeria/kendall/kendall_video_02.mp4"></video>
+                </div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                    <video controls class="w-full h-full object-cover" poster="galeria/kendall/kendall_img_02.jpeg"
+                        src="galeria/kendall/kendall_video_03.mp4"></video>
+                </div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                    <video controls class="w-full h-full object-cover" poster="galeria/kendall/kendall_img_02.jpeg"
+                        src="galeria/kendall/kendall_video_04.mp4"></video>
+                </div>
+
+                <!-- Images (12) -->
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_02.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_03.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_04.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_05.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_06.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_07.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_08.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_09.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_10.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_11.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_12.jpeg" alt="Kendall"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/kendall/kendall_img_13.jpeg" alt="Kendall"></div>
+            </div>
+        </div>
+
+        <!-- DORAL FULL GALLERY VIEW (Hidden by default) -->
+        <div id="doral-full-gallery" class="hidden transition-opacity duration-500">
+            <!-- Header & Back Button -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <span class="text-primary text-[10px] uppercase tracking-[0.3em] font-semibold block mb-2">Diamond
+                        at Doral</span>
+                    <h2 class="text-4xl md:text-5xl font-light italic text-charcoal dark:text-white leading-tight">
+                        Doral Gallery</h2>
+                </div>
+                <button onclick="showMainGallery()"
+                    class="group flex items-center gap-3 px-6 py-3 border border-charcoal/20 dark:border-white/20 rounded-full hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal transition-all duration-300">
+                    <span
+                        class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    <span class="text-xs font-bold uppercase tracking-widest">Volver</span>
+                </button>
+            </div>
+
+            <!-- Doral Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Videos (2) -->
+                <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                    <video controls class="w-full h-full object-cover" poster="galeria/doral/doral_img_02.jpeg"
+                        src="galeria/doral/doral_video_03.mp4"></video>
+                </div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl">
+                    <video controls class="w-full h-full object-cover" poster="galeria/doral/doral_img_02.jpeg"
+                        src="galeria/doral/doral_video_02.mp4"></video>
+                </div>
+
+                <!-- Images (7) -->
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_02.jpeg" alt="Doral"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_03.jpeg" alt="Doral"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_04.jpeg" alt="Doral"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_05.jpeg" alt="Doral"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_06.jpeg" alt="Doral"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_07.jpeg" alt="Doral"></div>
+                <div class="relative group h-[400px] overflow-hidden rounded-xl"><img
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src="galeria/doral/doral_img_08.jpeg" alt="Doral"></div>
+            </div>
+        </div>
+
         </div><!-- End Views Container -->
+        </div>
+        </div>
 
         </div>
 
@@ -575,10 +735,17 @@
                     </li>
                 </ul>
             </div>
-
+            <div class="lg:col-span-3">
+                <h4 class="text-primary text-[10px] uppercase tracking-[0.4em] font-bold mb-8">Contacto</h4>
+                <div class="space-y-4 text-sm font-light tracking-wide text-white/60">
+                    <p>Miami, FL</p>
+                    <p>P: +1 (786) 332-7065</p>
+                    <p>E: info@revolutiondiamond.com</p>
+                </div>
+            </div>
         </div>
         <div
-            class="max-w-[1600px] mx-auto mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/30">
+            class="max-w-[1600px] mx-auto mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/30">
             <p>© 2026 Revolution & Diamond Venues. Todos los derechos reservados.</p>
             <div class="flex gap-12">
                 <a class="hover:text-primary transition-colors" href="#">Privacidad</a>
@@ -600,7 +767,133 @@
             }
         });
     </script>
+
+    <!-- Instagram Embed Script -->
     <script async src="//www.instagram.com/embed.js"></script>
+
+    <!-- View Toggle Script -->
+    <script>
+        const mainView = document.getElementById('main-gallery-view');
+        const kendallView = document.getElementById('kendall-full-gallery');
+        const doralView = document.getElementById('doral-full-gallery');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function hideAllViews(callback) {
+            const views = [mainView, kendallView, doralView];
+            const activeView = views.find(view => !view.classList.contains('hidden'));
+
+            if (activeView) {
+                activeView.classList.add('opacity-0');
+                setTimeout(() => {
+                    activeView.classList.add('hidden');
+                    if (callback) callback();
+                }, 300);
+            } else {
+                if (callback) callback();
+            }
+        }
+
+        function showMainGallery() {
+            if (!mainView.classList.contains('hidden')) return;
+            hideAllViews(() => {
+                mainView.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'auto' });
+                setTimeout(() => {
+                    mainView.classList.remove('opacity-0');
+                }, 10);
+            });
+        }
+
+        function showKendallGallery() {
+            if (!kendallView.classList.contains('hidden')) return;
+            hideAllViews(() => {
+                kendallView.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'auto' });
+                setTimeout(() => {
+                    kendallView.classList.remove('opacity-0');
+                }, 10);
+            });
+        }
+
+        function showDoralGallery() {
+            if (!doralView.classList.contains('hidden')) return;
+            hideAllViews(() => {
+                doralView.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'auto' });
+                setTimeout(() => {
+                    doralView.classList.remove('opacity-0');
+                }, 10);
+            });
+        }
+
+        // Event Listeners for Nav
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href === '#kendall') {
+                    e.preventDefault();
+                    showKendallGallery();
+                } else if (href === '#doral') {
+                    e.preventDefault();
+                    showDoralGallery();
+                } else if (href === '#' || href === '' || (href.includes('index.html') && link.innerText === 'HOME')) {
+                    // Handled by onclick in HTML for Home, or we can handle here.
+                    // The existing HTML has onclick="showMainGallery(); return false;" on HOME.
+                    // But just in case:
+                } else {
+                    // For other sections, if we are in a sub-view, go back to main first
+                    const isSubViewOpen = !kendallView.classList.contains('hidden') || !doralView.classList.contains('hidden');
+                    if (isSubViewOpen) {
+                        showMainGallery();
+                        // Allow default action to scroll to hash in main view
+                    }
+                }
+            });
+        });
+
+        // Event Listeners for Cards
+        function setupCardListener(id, showFunction) {
+            const card = document.getElementById(id);
+            if (card) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', (e) => {
+                    // Don't trigger if clicking a link/button inside the card
+                    if (!e.target.closest('a') && !e.target.closest('button')) {
+                        showFunction();
+                    }
+                });
+            }
+        }
+
+        setupCardListener('kendall', showKendallGallery);
+        setupCardListener('doral', showDoralGallery);
+
+        // Initial Hash Check
+        function checkHash() {
+            const hash = window.location.hash;
+
+            // Function to reset all views to hidden/invisible immediately
+            function resetForHash() {
+                [mainView, kendallView, doralView].forEach(v => v.classList.add('hidden', 'opacity-0'));
+            }
+
+            if (hash === '#kendall') {
+                resetForHash();
+                kendallView.classList.remove('hidden');
+                setTimeout(() => kendallView.classList.remove('opacity-0'), 10);
+                window.scrollTo({ top: 0, behavior: 'auto' });
+            } else if (hash === '#doral') {
+                resetForHash();
+                doralView.classList.remove('hidden');
+                setTimeout(() => doralView.classList.remove('opacity-0'), 10);
+                window.scrollTo({ top: 0, behavior: 'auto' });
+            }
+            // Default is Main View (already set by HTML structure)
+        }
+
+        window.addEventListener('DOMContentLoaded', checkHash);
+        window.addEventListener('hashchange', checkHash);
+    </script>
 </body>
 
 </html>
