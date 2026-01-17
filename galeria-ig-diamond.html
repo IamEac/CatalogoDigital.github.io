@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Instagram Diamond | Revolution & Diamond Venues</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+            h1, h2, h3, h4, .serif {
+                font-family: 'Newsreader', serif;
+            }
+        }
+        :root {
+            --primary: #c5a358;
+            --background-light: #fdfdfb;
+            --charcoal: #1a1a1a;
+            --divider: #e5e1d8;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--background-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c5a358",
+                        "background-light": "#fdfdfb",
+                        "background-dark": "#0f0f0e",
+                        "charcoal": "#1a1a1a",
+                        "cream-muted": "#e5e1d8"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="overflow-y-scroll bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-300 transition-colors duration-300 antialiased">
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-cream-muted dark:border-white/10">
+        <div class="px-6 py-4 flex flex-col items-center">
+            <div class="mb-4">
+                <a href="index.html"
+                    class="text-2xl font-medium tracking-[0.15em] uppercase text-charcoal dark:text-white hover:text-primary transition-colors">
+                    Revolution & Diamond
+                </a>
+            </div>
+            <nav
+                class="w-full max-w-[1600px] flex overflow-x-auto whitespace-nowrap gap-6 md:gap-0 md:justify-between items-center text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.25em] font-medium text-charcoal/60 dark:text-white/50 border-t border-cream-muted/60 dark:border-white/5 pt-4 pb-2 scrollbar-hide mask-fade">
+                <a class="hover:text-primary transition-colors py-2 font-bold text-charcoal dark:text-white shrink-0"
+                    href="galeria.html">HOME</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 shrink-0" href="galeria-kendall.html">Kendall</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 shrink-0" href="galeria-doral.html">Doral</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 shrink-0" href="galeria-diamond.html">Diamond</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 shrink-0" href="galeria-ig-revolution.html">IG
+                    Revolution</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 text-primary border-b border-primary/40 shrink-0"
+                    href="#">IG Diamond</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+
+                <a class="hover:text-primary transition-colors py-2 shrink-0" href="galeria-quesos.html">Mesa de
+                    Quesos</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 shrink-0" href="galeria-videos.html">Videos
+                    Party</a>
+                <span class="hidden md:block h-4 w-[1px] bg-cream-muted dark:bg-white/10 shrink-0"></span>
+                <a class="hover:text-primary transition-colors py-2 shrink-0"
+                    href="galeria-corporate.html">Corporate</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-12 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto">
+
+        <!-- IG CONTAINER -->
+        <div id="views-container" class="min-h-screen">
+            <div id="ig-diamond-full-gallery" class="transition-opacity duration-500">
+                <!-- Header & Back Button -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <span
+                            class="text-primary text-[10px] uppercase tracking-[0.3em] font-semibold block mb-2">Social
+                            Media</span>
+                        <h2 class="text-4xl md:text-5xl font-light italic text-charcoal dark:text-white leading-tight">
+                            @diamondvenuedoral</h2>
+                        <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                            class="inline-block mt-2 text-xs font-semibold uppercase tracking-widest text-charcoal/60 dark:text-white/60 hover:text-primary transition-colors">
+                            Seguir en Instagram
+                        </a>
+                    </div>
+                    <a href="galeria.html"
+                        class="group flex items-center gap-3 px-6 py-3 border border-charcoal/20 dark:border-white/20 rounded-full hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal transition-all duration-300">
+                        <span
+                            class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        <span class="text-xs font-bold uppercase tracking-widest">Volver</span>
+                    </a>
+                </div>
+
+                <!-- Static Feed Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-8 max-w-5xl mx-auto" id="insta-feed-static">
+                    <!-- Post 1 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_02.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 2 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_03.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 3 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_05.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 4 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_06.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 5 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_07.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 6 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_08.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 7 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_09.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 8 -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <img src="galeria/diamond/diamond_img_10.jpeg" alt="Diamond Venue"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">favorite</span> <span
+                                    class="text-sm font-bold">Like</span></div>
+                        </div>
+                    </a>
+                    <!-- Post 9 (Video Preview) -->
+                    <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                        class="block relative aspect-square group overflow-hidden bg-gray-100 dark:bg-white/5">
+                        <video src="galeria/diamond/diamond_video_01.mp4"
+                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                            muted loop autoplay playsinline></video>
+                        <div class="absolute top-2 right-2 text-white drop-shadow-md"><span
+                                class="material-symbols-outlined">videocam</span></div>
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6 text-white">
+                            <div class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-xl">play_circle</span> <span
+                                    class="text-sm font-bold">Watch</span></div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white/90 py-24 px-6 border-t-8 border-primary">
+        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-12 flex flex-col items-center">
+                <h2 class="text-2xl italic font-light mb-4">Síguenos para más inspiración</h2>
+                <a href="https://www.instagram.com/diamondvenuedoral/?hl=en" target="_blank"
+                    class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                    @diamondvenuedoral
+                </a>
+            </div>
+        </div>
+        <div
+            class="max-w-[1600px] mx-auto mt-12 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/30">
+            <p>© 2026 Revolution & Diamond Venues.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Theme Toggle (if needed in header) or standard JS stuff
+        document.addEventListener('DOMContentLoaded', () => {
+            // Optional: Add hover autoplay for the video tile
+        });
+    </script>
+</body>
+
+</html>
